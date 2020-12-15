@@ -1,0 +1,14 @@
+database:
+    client: postgresql
+    connection:
+        database: edward
+        host: 'aox.hopto.org'
+        port: 3001
+        user: admin
+        password: admin
+    migrations:
+        tableName: knex_migrations
+        directory: ./src/models/migrations
+    pool:
+        min: 2
+        max: 10

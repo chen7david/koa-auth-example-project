@@ -1,0 +1,11 @@
+server:
+  protocol: http
+  hostname: localhost
+  port: 4000
+
+autoload:
+  - controllers
+  - middleware
+  - models
+  - router
+  - utils
