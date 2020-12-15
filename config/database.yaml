@@ -1,7 +1,7 @@
 database:
     client: postgresql
     connection:
-        database: edward
+        database: identity-manager-201215
         host: 'aox.hopto.org'
         port: 3001
         user: admin

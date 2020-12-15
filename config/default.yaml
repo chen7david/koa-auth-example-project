@@ -2,7 +2,13 @@ server:
   protocol: http
   hostname: localhost
   port: 4000
-
+keys:
+    access:
+        secret: secret-one
+        expiry: 1m
+    refresh:
+        secret: secret-two
+        expiry: 30d
 autoload:
   - controllers
   - middleware
