@@ -3,11 +3,12 @@ const { ValidationError } = require('joi')
 module.exports = {
 
     mutator: async (err, ctx, next) => {
-        console.log('mutator')
-        
-        if(err instanceof ValidationError)
-        console.log('adx', err instanceof ValidationError)
-        return err
+        let mutated = null
+        if(err instanceof ValidationError){
+            mutated = err
+        }
+
+        return mutated
     },
 
     errors: (cb = null) => async (ctx, next) => {
