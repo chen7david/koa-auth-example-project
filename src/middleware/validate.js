@@ -1,7 +1,7 @@
 const Joi = require('joi')
 
 const schema = {
-    roles: Joi.object().options({ abortEarly: false, stripUnknown: true }).keys({
+    role: Joi.object().options({ abortEarly: false, stripUnknown: true }).keys({
         phone: Joi.string().length(11).required(),
         password: Joi.string().required(),
     })
@@ -9,7 +9,7 @@ const schema = {
 
 module.exports = {
   
-    body: (schema) => async (ctx, next) => {
+    validateBody: (schema) => async (ctx, next) => {
         try {
             const body = ctx.request.body
             const { error, value } = schema.validate(body)

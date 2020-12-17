@@ -3,8 +3,8 @@ const app = new Koa()
 const cors = require('kcors')
 const bodyparser = require('koa-bodyparser')
 const { server } = require('confyg')
-const { router, middleware }  = require('goload')()
-const { errors, logger, mutator } = middleware.app
+const router  = require('./router')
+const { errors, logger, mutator } = require('./middleware/app')
 
 /* ERROR HANDLING MIDDLEWARE */
 app.use(errors(mutator))

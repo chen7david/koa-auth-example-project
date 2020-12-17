@@ -1,4 +1,5 @@
 const { ValidationError } = require('joi')
+const { UniqueViolationError } = require('objection')
 
 module.exports = {
 
@@ -6,6 +7,10 @@ module.exports = {
         let mutated = null
         if(err instanceof ValidationError){
             mutated = err
+        }
+
+        if(err instanceof UniqueViolationError){
+            mutated = UniqueViolationError
         }
 
         return mutated

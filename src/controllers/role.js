@@ -1,4 +1,4 @@
-
+// const x = require('goload')()
 
 module.exports = {
     index: async (ctx) => {
